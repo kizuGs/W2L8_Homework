@@ -237,6 +237,8 @@ namespace W2L8_Homework
         private static void Program7()
 
         {
+            Console.WriteLine("Program 6\n");
+            
             //druk rosnaco
             int x, y, z;
             for (x = 1; x <= 5; x++)
@@ -273,18 +275,72 @@ namespace W2L8_Homework
         private static void Program8()
 
         {
+            Console.WriteLine("Program 8\n");
+
+            string my_word;
+            string my_word_reverse = string.Empty;
+
+            Console.WriteLine("Wprowadz lancuch znakow: ");
+            my_word = Console.ReadLine();
+
+            Console.WriteLine("Wprowadzone słowo: " + my_word);
+
+            for (int i = my_word.Length-1 ; i >= 0; i--)
+            {
+                my_word_reverse = my_word_reverse + my_word[i];
+            }
+            Console.Write($"Wpisany lancuch znakow od tylu : {my_word_reverse} ");
+            Console.ReadLine();
+
+
         }
 
         //Program 9
         private static void Program9()
 
         {
+            Console.WriteLine("Podaj liczbę w sytemie dziesiętnym");
+            int a = int.Parse(Console.ReadLine());
+
+            string d = "";
+            while (a > 0)
+            {
+                d = d + (a % 2);
+                a = a / 2;
+                
+            }
+            string bin = string.Empty;
+            for (int i = d.Length - 1; i >= 0; i--)
+            {
+                bin = bin + d[i];
+            }
+
+            Console.WriteLine(bin);
+
         }
 
         //Program 10
         private static void Program10()
 
         {
+
+            Console.WriteLine("Podaj pierwsza liczbę ");
+            int x = int.Parse(Console.ReadLine());
+            Console.WriteLine("Podaj pierwsza liczbę ");
+            int y = int.Parse(Console.ReadLine());
+
+            int mul = x * y;
+
+            while (x != y)
+            {
+                if (x > y)
+                    x = x - y;
+                else
+                    y = y - x;
+            }
+
+            Console.WriteLine("Najmniejsza wspolna wielokrotnosc: (NWD) to: " + mul/x);
+
         }
 
     }
